@@ -1,53 +1,95 @@
-body{
-    align-content: center;
-    background-color: bisque;
-}
-.container{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
-.calc{
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.calc {
+    display: grid;
     background-color: #3a4452;
     border-radius: 8px;
     padding: 10px;
 }
-.calc input{
-    border: 0;
-    outline: 0;
-    border-radius: 5px;
-    font-size: 20px;
-    width: 60px;
-    height: 60px;
-    box-shadow: -6px -6px 15px rgba(255,255,255,0.1), 6px 6px 15px rgba(0,0,0,0.2);
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    margin: 10px;
-}
-input::-webkit-inner-spin-button{
-    -webkit-appearance: none;
-    margin: 0;
-}
-.display{
+
+.display {
+    grid-column: span 4;
+    margin-bottom: 10px;
     display: flex;
-    justify-content:flex-end;
-    margin: 20px 0;
+    justify-content: flex-end;
 }
-.display input{
+
+.display input {
+    width: 350px;
+    height: 50px;
+    padding: 10px;
+    font-size: 2em;
     text-align: right;
-    float: 1;
-    font-size: 30px;
-    box-shadow: none;
-    width: 300px;
-    background-color: #fff;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 5px;
     color: #3a4452;
 }
-input.equal{
-    width: 145px;
-    background-color: rgb(212, 146, 24);
+
+button {
+    width : 70px;
+    border: none;
+    height: 70px;
+    padding: 20px;
+    font-size: 28px;
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3a4452;
+    transition: background-color 0.3s;
+    box-shadow: -6px -6px 15px rgba(255,255,255,0.1), 6px 6px 15px rgba(0,0,0,0.2);
 }
-input.del{
-    background-color: rgb(187, 32, 11);
+
+button:hover {
+    background-color: #d0d0d0;
+}
+
+button.ac {
+    background-color: #ff6666;
+    color: white;
+    padding: 0%;
+}
+
+button.del {
+    background-color: #ffcc66;
+    color: white;
+    padding: 0%;
+}
+
+button.equal {
+    background-color: #66cc66;
+    color: white;
+    width: 165px;
+}
+button.equal:hover {
+    background-color: #409743;
+}
+button.ac:hover {
+    background-color: #c12727;
+}
+button.del:hover {
+    background-color: #bf8518;
+}
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
